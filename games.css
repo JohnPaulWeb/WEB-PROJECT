@@ -1,0 +1,58 @@
+body, h1, h2, p, ul, li, form, label {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: greenyellow;
+    color: wheat;   
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#home {
+    text-align: center;
+    background-color: salmon;
+    padding: 50px 20px;
+}
+
+button {
+    background-color: darkgoldenrod;
+    color: wheat;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkmagenta;
+}
+
+footer {
+    background-color: seagreen;
+    color: wheat;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+

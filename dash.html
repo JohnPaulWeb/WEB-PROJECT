@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="board.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>Folders</h2>
+            <ul id="folderlist">
+
+            </ul>
+            <button id="addFolderBtn">Add Folder</button>
+        </div>
+
+
+        <div class="main">
+            <h2 id="currenFolder">All File</h2>
+            <div class="toolbar">
+                <button id="addFileBtn">Add File</button>
+            </div>
+            <div class="file-list" id="fileList">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle">Add</h3>
+            <input type="text" id="itemName" placeholder="Place your name">
+            <button id="saveBtn">Save</button>
+        </div>
+    </div>
+
+
+
+    <script src="system.js"></script>
+</body>
+</html>

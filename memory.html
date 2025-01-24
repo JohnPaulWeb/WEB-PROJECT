@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Games</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+            margin: 0;
+        }
+
+        h1 {
+            color: pink;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            width: 100%;
+        }
+        input[type="number"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: pink;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Number Analyzer</h1>
+
+    <div class="container">
+        <input type="number" id="inputNumber" placeholder="Enter a number" />
+        <button onclick="analyzeNumber()">Analyze</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function analyzeNumber() {
+            const num = document.getElementById("inputNumber").value;
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = ""; 
+
+            if (num === "" || isNaN(num)) {
+                resultDiv.innerHTML = "Please enter a valid number.";
+                return;
+            }
+
+            const maxNumber = parseInt(num);
+            for (let i = 1; i <= maxNumber; i++) {
+               
+                const isEven = i % 2 === 0;
+                const message = isEven ? `${i} is Even` : `${i} is Odd`;
+                
+                
+                const p = document.createElement("p");
+                p.textContent = message;
+                resultDiv.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>
